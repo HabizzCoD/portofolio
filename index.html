@@ -1,0 +1,1236 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio - Andar Alwein Pinilas</title>
+
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon.png" />
+
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-black text-white font-sans antialiased">
+    <!-- Navbar -->
+    <nav
+      class="fixed w-full z-50 bg-black/50 backdrop-blur-sm border-b border-white/10"
+    >
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="flex items-center justify-between h-20">
+          <div class="flex-shrink-0">
+            <div
+              class="w-10 h-10 border-2 border-gray-500 flex items-center justify-center"
+            >
+              <span class="text-sm font-bold">ANDAR</span>
+            </div>
+          </div>
+
+          <div
+            class="hidden md:flex items-center space-x-12 text-sm tracking-wider"
+          >
+            <a href="#about" class="hover:text-gray-400 transition">ABOUT</a>
+            <a href="#experience" class="hover:text-gray-400 transition"
+              >EXPERIENCE</a
+            >
+            <a href="#skills" class="hover:text-gray-400 transition">SKILLS</a>
+            <a href="#projects" class="hover:text-gray-400 transition"
+              >PROJECTS</a
+            >
+            <a href="#contact" class="hover:text-gray-400 transition"
+              >CONTACT</a
+            >
+          </div>
+
+          <button
+            id="menu-btn"
+            class="md:hidden w-10 h-10 flex flex-col items-center justify-center space-y-1.5"
+          >
+            <span class="w-6 h-0.5 bg-white transition-all" id="line1"></span>
+            <span class="w-6 h-0.5 bg-white transition-all" id="line2"></span>
+            <span class="w-6 h-0.5 bg-white transition-all" id="line3"></span>
+          </button>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-black border-t border-white/10"
+      >
+        <div class="px-6 py-8 space-y-6 text-sm tracking-wider">
+          <a href="#about" class="block hover:text-gray-400 transition"
+            >ABOUT</a
+          >
+          <a href="#experience" class="block hover:text-gray-400 transition"
+            >EXPERIENCE</a
+          >
+          <a href="#skills" class="block hover:text-gray-400 transition"
+            >SKILLS</a
+          >
+          <a href="#projects" class="block hover:text-gray-400 transition"
+            >PROJECTS</a
+          >
+          <a href="#contact" class="block hover:text-gray-400 transition"
+            >CONTACT</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="min-h-screen flex items-center pt-20 relative overflow-hidden"
+    >
+      <div class="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          class="absolute top-1/4 right-0 w-96 h-96 border border-white/5 rounded-full rotate-slow"
+        ></div>
+        <div
+          class="absolute bottom-1/4 left-0 w-64 h-64 border border-white/10"
+        ></div>
+        <div
+          class="absolute top-1/2 left-1/3 w-1 h-32 bg-white/5 transform -rotate-45"
+        ></div>
+        <div class="absolute bottom-1/3 right-1/4 w-40 h-1 bg-white/5"></div>
+      </div>
+
+      <div class="max-w-6xl mx-auto px-6 lg:px-12 py-20 w-full relative z-10">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div class="lg:col-span-7 space-y-8">
+            <div class="space-y-6">
+              <p
+                class="text-gray-500 text-xs tracking-widest uppercase slide-in"
+              >
+                Web Developer > Data Analyst & Science > UI/UX Designer
+              </p>
+
+              <h1
+                class="text-5xl md:text-6xl lg:text-7xl font-light leading-tight slide-in delay-1"
+              >
+                Crafting Digital
+                <span class="block line-accent mt-2">Experiences</span>
+              </h1>
+
+              <p
+                class="text-gray-400 text-base md:text-lg max-w-lg leading-relaxed slide-in delay-2"
+              >
+                Focuses on clean code, intuitive interfaces, and meaningful user
+                experiences.
+              </p>
+            </div>
+
+            <div class="flex items-center gap-8 slide-in delay-3">
+              <a
+                href="#projects"
+                class="group flex items-center gap-3 text-sm tracking-wider hover:gap-5 transition-all duration-300"
+              >
+                VIEW WORK
+                <svg
+                  class="w-5 h-5"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="1.5"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+              <div class="w-px h-8 bg-white/20"></div>
+              <a
+                href="#contact"
+                class="text-sm tracking-wider text-gray-500 hover:text-white transition"
+              >
+                GET IN TOUCH
+              </a>
+            </div>
+
+            <div class="flex gap-4 pt-12 border-t border-white/10">
+              <a
+                href="https://www.instagram.com/hasco_de/"
+                class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/andar-pinilas-802364247"
+                class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="mailto:andarpinilas.s1@gmail.com"
+                class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="lg:col-span-5 flex justify-center lg:justify-end">
+            <div class="relative">
+              <div class="absolute -inset-4 border border-white/10"></div>
+              <div class="absolute -inset-8 border border-white/5"></div>
+              <div
+                class="absolute -top-2 -left-2 w-8 h-8 border-t-2 border-l-2 border-white"
+              ></div>
+              <div
+                class="absolute -bottom-2 -right-2 w-8 h-8 border-b-2 border-r-2 border-white"
+              ></div>
+
+              <div
+                class="relative w-72 h-96 md:w-80 md:h-[28rem] overflow-hidden bg-gray-900"
+              >
+                <img
+                  src="img/portfolio.jpg"
+                  alt="Profile"
+                  class="w-full h-full object-cover grayscale hover:grayscale-0 transition duration-700"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent opacity-60"
+                ></div>
+                <div
+                  class="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black to-transparent"
+                >
+                  <div class="text-xs tracking-widest text-gray-400">
+                    AVAILABLE FOR WORK
+                  </div>
+                  <div class="w-12 h-0.5 bg-white mt-2"></div>
+                </div>
+              </div>
+
+              <div
+                class="absolute -right-4 top-1/3 bg-black border border-white/20 px-4 py-3 backdrop-blur-sm"
+              >
+                <div class="text-2xl font-light">3+</div>
+                <div class="text-xs text-gray-500 tracking-wide">YEARS</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-32 border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-12 gap-16">
+          <div class="lg:col-span-4">
+            <div class="sticky top-32">
+              <p class="text-xs tracking-widest text-gray-600 mb-4">
+                01 — ABOUT ME
+              </p>
+              <h2 class="text-4xl md:text-5xl font-light line-accent">
+                Who I Am
+              </h2>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-8">
+            <p
+              class="text-xl md:text-2xl font-light text-gray-300 leading-relaxed"
+            >
+              I am a passionate web developer, data analyst, and UI/UX designer
+              with extensive experience and skills, capable of creating useful
+              applications.
+            </p>
+            <div class="space-y-6 text-gray-400 leading-relaxed">
+              <p>
+                Strong communication skills, creative, and accustomed to working
+                collaboratively and independently. Experienced in managing
+                processes from planning, execution, to evaluation based on user
+                needs and data. Skilled in website development, document
+                management, data analysis, time management, and adapting to new
+                technologies.
+              </p>
+              <p>
+                Successfully simplifying complex concepts into
+                easy-to-understand solutions, improving website performance,
+                presenting informative data visualizations, and producing
+                functional, consistent digital output that positively impacts
+                teams and organizations.
+              </p>
+            </div>
+            <div class="pt-8">
+              <a
+                href="#contact"
+                class="px-6 py-3 bg-white text-black hover:bg-gray-300 transition text-sm tracking-wider"
+              >
+                LET'S TALK
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="py-32 border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-12 gap-16">
+          <div class="lg:col-span-4">
+            <div class="sticky top-32">
+              <p class="text-xs tracking-widest text-gray-600 mb-4">
+                02 — EXPERIENCE
+              </p>
+              <h2 class="text-4xl md:text-5xl font-light line-accent">
+                My Journey
+              </h2>
+            </div>
+          </div>
+          <div class="lg:col-span-8 space-y-12">
+            <!-- Experience Item 1 -->
+            <div class="border-l-2 border-white/20 pl-8 relative">
+              <div class="absolute -left-2 top-0 w-4 h-4 bg-white"></div>
+              <div class="mb-4">
+                <div class="text-xs tracking-widest text-gray-600 mb-2">
+                  DECEMBER 2025 — PRESENT
+                </div>
+                <h3 class="text-2xl font-light mb-2">
+                  UI/UX Designer Internship
+                </h3>
+                <p class="text-gray-500">StudyFirst</p>
+              </div>
+              <p class="text-gray-400 leading-relaxed">
+                • Involved in the design process, from wireframe creation to
+                prototyping using Figma, and collaborated with the development
+                team to ensure the design was successfully realized.
+              </p>
+              <br />
+              <p class="text-gray-400 leading-relaxed">
+                • Successfully improved the user experience by simplifying the
+                navigation flow and refining the interface based on feedback and
+                evaluation results.
+              </p>
+            </div>
+
+            <!-- Experience Item 2 -->
+            <div class="border-l-2 border-white/20 pl-8 relative">
+              <div class="absolute -left-2 top-0 w-4 h-4 bg-white"></div>
+              <div class="mb-4">
+                <div class="text-xs tracking-widest text-gray-600 mb-2">
+                  OCTOBER 2025 — PRESENT
+                </div>
+                <h3 class="text-2xl font-light mb-2">
+                  Freelance Mentor Programming
+                </h3>
+                <p class="text-gray-500">Flashcom Indonesia</p>
+              </div>
+              <p class="text-gray-400 leading-relaxed">
+                • Implement web programming learning using HTML, CSS,
+                JavaScript, and related frameworks using a hands-on approach and
+                real-life projects, including module development and
+                practice-based evaluation.
+              </p>
+              <br />
+              <p class="text-gray-400 leading-relaxed">
+                • Through completing functional web projects and improving
+                problem-solving skills in web application development,
+                participants significantly improved their understanding and
+                coding skills.
+              </p>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="border-l-2 border-white/20 pl-8 relative">
+              <div class="absolute -left-2 top-0 w-4 h-4 bg-white"></div>
+              <div class="mb-4">
+                <div class="text-xs tracking-widest text-gray-600 mb-2">
+                  FEBRUARY 2024 — PRESENT
+                </div>
+                <h3 class="text-2xl font-light mb-2">Copywriter</h3>
+                <p class="text-gray-500">Has Code at Instagram</p>
+              </div>
+              <p class="text-gray-400 leading-relaxed">
+                • Created copywriting for educational marketing campaigns
+                utilizing articles, blogs, and other social media platforms,
+                optimizing content with SEO techniques to increase visibility
+                and audience reach.
+              </p>
+              <br />
+              <p class="text-gray-400 leading-relaxed">
+                • Edited and revised material to meet quality standards and
+                communication style, highlighting key points for easy
+                understanding. Successfully increased reader engagement through
+                unique and entertaining content strategies.
+              </p>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="border-l-2 border-white/20 pl-8 relative">
+              <div class="absolute -left-2 top-0 w-4 h-4 bg-white"></div>
+              <div class="mb-4">
+                <div class="text-xs tracking-widest text-gray-600 mb-2">
+                  SEPTEMBER 2022 — PRESENT
+                </div>
+                <h3 class="text-2xl font-light mb-2">
+                  Freelance Web Developer
+                </h3>
+                <p class="text-gray-500">Sinode GERMITA</p>
+              </div>
+              <p class="text-gray-400 leading-relaxed">
+                • Designed a website application by creating an attractive
+                visual design, integrating content such as institutional
+                information, regional and congregation monitoring, and a news
+                portal with an easy-to-read layout and intuitive navigation.
+              </p>
+              <br />
+              <p class="text-gray-400 leading-relaxed">
+                • Successfully reduced page load times through server
+                optimization and maintained user security using SSL and data
+                encryption to protect information.
+              </p>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="border-l-2 border-white/20 pl-8 relative">
+              <div class="absolute -left-2 top-0 w-4 h-4 bg-white"></div>
+              <div class="mb-4">
+                <div class="text-xs tracking-widest text-gray-600 mb-2">
+                  DECEMBER 2023 - FEBRUARY 2024
+                </div>
+                <h3 class="text-2xl font-light mb-2">
+                  Frontend Developer Internship
+                </h3>
+                <p class="text-gray-500">PT Ekata Technology Indonesia</p>
+              </div>
+              <p class="text-gray-400 leading-relaxed">
+                • Developed landing page and dashboard UI/UX designs using
+                ReactJS and Bootstrap by transforming Figma designs into
+                interactive and responsive pages and gathering the necessary
+                assets for the dashboard structure.
+              </p>
+              <br />
+              <p class="text-gray-400 leading-relaxed">
+                • Integrated API data with the Backend team, creating CRUD
+                features in the dashboard that allow users to manage data, and
+                adding login authentication to protect user access to sensitive
+                data.
+              </p>
+              <br />
+              <p class="text-gray-400 leading-relaxed">
+                • Accurately translated designs with 100% accuracy, ensuring
+                alignment between design and implementation. This increased user
+                satisfaction and convenience when accessing the dashboard
+                account.
+              </p>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="border-l-2 border-white/20 pl-8 relative">
+              <div class="absolute -left-2 top-0 w-4 h-4 bg-white"></div>
+              <div class="mb-4">
+                <div class="text-xs tracking-widest text-gray-600 mb-2">
+                  MAY 2022 - JUNE 2022
+                </div>
+                <h3 class="text-2xl font-light mb-2">Graphic Design Teacher</h3>
+                <p class="text-gray-500">Brilliant Brain Indonesia</p>
+              </div>
+              <p class="text-gray-400 leading-relaxed">
+                • Teaches the fundamentals of graphic design using Adobe
+                Photoshop, including an introduction to menus, tools, layout,
+                typography, and color usage, and guides students in completing
+                design projects through interactive teaching methods.
+              </p>
+              <br />
+              <p class="text-gray-400 leading-relaxed">
+                • Improves students' graphic design skills with satisfactory
+                exam results, and helps companies achieve their marketing goals
+                through effective and informative brochure designs.
+              </p>
+            </div>
+
+            <!-- Experience Item 3 -->
+            <div class="border-l-2 border-white/20 pl-8 relative">
+              <div class="absolute -left-2 top-0 w-4 h-4 bg-white"></div>
+              <div class="mb-4">
+                <div class="text-xs tracking-widest text-gray-600 mb-2">
+                  DECEMBER 2020 - JANUARY 2021
+                </div>
+                <h3 class="text-2xl font-light mb-2">
+                  Data Analyst Internship
+                </h3>
+                <p class="text-gray-500">DISKOMINFO TALAUD</p>
+              </div>
+              <p class="text-gray-400 leading-relaxed">
+                • Collect and analyze data on food production, fisheries, the
+                number of cities, villages, and population in the Talaud Islands
+                Regency, then display the results in graphs for easier
+                understanding.
+              </p>
+              <br />
+              <p class="text-gray-400 leading-relaxed">
+                • Present informative graphs that increase public awareness of
+                production and population trends, and support the government in
+                evaluating and designing more targeted and effective regional
+                development strategies.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-32 border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="grid lg:grid-cols-12 gap-16">
+          <div class="lg:col-span-4">
+            <div class="sticky top-32">
+              <p class="text-xs tracking-widest text-gray-600 mb-4">
+                03 — SKILLS
+              </p>
+              <h2 class="text-4xl md:text-5xl font-light line-accent">
+                Expertise
+              </h2>
+            </div>
+          </div>
+          <div class="lg:col-span-8">
+            <div class="grid gap-12">
+              <!-- Programming Language & Framework -->
+              <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 border border-white/20 flex items-center justify-center"
+                  >
+                    <span class="text-xs">01</span>
+                  </div>
+                  <h3 class="text-xl font-light">
+                    Programming Language & Framework
+                  </h3>
+                </div>
+                <ul class="space-y-3 text-gray-400">
+                  <li class="flex items-center gap-3">
+                    HTML, CSS, Javascript, PHP, Python, Bootstrap, TailwindCSS,
+                    React.js, CodeIgniter, Laravel, Tensorflow, Scikit-Learn.
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Design & Tools -->
+              <div class="space-y-6">
+                <div class="flex items-center gap-4">
+                  <div
+                    class="w-12 h-12 border border-white/20 flex items-center justify-center"
+                  >
+                    <span class="text-xs">02</span>
+                  </div>
+                  <h3 class="text-xl font-light">Design & Tools</h3>
+                </div>
+                <ul class="space-y-3 text-gray-400">
+                  <li class="flex items-center gap-3">
+                    Visual Studio Code, GIT (Group Inclusive Tour), XAMPP,
+                    Laragon, Postman, WordPress, Figma, Adobe Photoshop,
+                    Microsoft Office.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Website Section -->
+    <section id="projects" class="py-32 border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="mb-16">
+          <p class="text-xs tracking-widest text-gray-600 mb-4">
+            04 — PROJECTS
+          </p>
+          <h2 class="text-4xl md:text-5xl font-light line-accent">
+            Selected Work Website
+          </h2>
+        </div>
+
+        <div class="space-y-24">
+          <!-- Project 1 -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center hover-lift">
+            <div class="lg:col-span-7 order-2 lg:order-1">
+              <div
+                class="relative aspect-video bg-gray-900 border border-white/10 overflow-hidden group"
+              >
+                <img
+                  src="img/portfolio/po1.png"
+                  alt="Project 1"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"
+                ></div>
+              </div>
+            </div>
+            <div class="lg:col-span-5 order-1 lg:order-2 space-y-4">
+              <div class="text-xs tracking-widest text-gray-600">
+                FEATURED PROJECT
+              </div>
+              <h3 class="text-3xl font-light">
+                News Portal With Bootstrap and CodeIgniter
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                This portal not only displays news that has been verified by the
+                editorial team, but also presents information based on
+                geographic region, reader interests, and the right time of
+                publication.
+              </p>
+              <div class="flex flex-wrap gap-3 pt-4">
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Bootstrap 5</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >CodeIgniter</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >MySql</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >XAMPP</span
+                >
+              </div>
+              <div class="pt-4">
+                <a
+                  href="https://www.media.germita.com/"
+                  class="inline-flex items-center gap-2 text-sm tracking-wider hover:gap-4 transition-all"
+                >
+                  VIEW PROJECT
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center hover-lift">
+            <div class="lg:col-span-5 space-y-4">
+              <div class="text-xs tracking-widest text-gray-600">
+                FEATURED PROJECT
+              </div>
+              <h3 class="text-3xl font-light">
+                Library Book Lending Application | Laravel Filament
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                It helps make the entire library administration process much
+                more efficient and accurate. Data is more secure because it's
+                stored in a regularly backed-up database, and it simplifies
+                reporting and periodic evaluation.
+              </p>
+              <div class="flex flex-wrap gap-3 pt-4">
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Tailwindcss</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Laravel</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Filament</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Laragon</span
+                >
+              </div>
+              <div class="pt-4">
+                <a
+                  href="https://medium.com/@h4bisCod1ng/aplikasi-peminjaman-buku-perpustakaan-laravel-filament-148eb0c6af81"
+                  class="inline-flex items-center gap-2 text-sm tracking-wider hover:gap-4 transition-all"
+                >
+                  VIEW PROJECT
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="lg:col-span-7">
+              <div
+                class="relative aspect-video bg-gray-900 border border-white/10 overflow-hidden group"
+              >
+                <img
+                  src="img/portfolio/po4.png"
+                  alt="Project 2"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center hover-lift">
+            <div class="lg:col-span-7 order-2 lg:order-1">
+              <div
+                class="relative aspect-video bg-gray-900 border border-white/10 overflow-hidden group"
+              >
+                <img
+                  src="img/portfolio/po3.png"
+                  alt="Project 3"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"
+                ></div>
+              </div>
+            </div>
+            <div class="lg:col-span-5 order-1 lg:order-2 space-y-4">
+              <div class="text-xs tracking-widest text-gray-600">
+                FEATURED PROJECT
+              </div>
+              <h3 class="text-3xl font-light">
+                POS Cashier — Application Using Laravel Jetstream and Livewire
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                View daily, weekly, and even monthly sales reports with just a
+                few clicks. You can monitor best-selling products and the most
+                frequently used payment methods. Even when opening a second
+                branch, data integration between locations can be done in a
+                single dashboard.
+              </p>
+              <div class="flex flex-wrap gap-3 pt-4">
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Bootstrap 4</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Laravel</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Livewire</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >MySql</span
+                >
+              </div>
+              <div class="pt-4">
+                <a
+                  href="https://medium.com/@h4bisCod1ng/pos-kasir-aplikasi-menggunakan-laravel-jetstream-livewire-574b27fec098"
+                  class="inline-flex items-center gap-2 text-sm tracking-wider hover:gap-4 transition-all"
+                >
+                  VIEW PROJECT
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center hover-lift">
+            <div class="lg:col-span-5 space-y-4">
+              <div class="text-xs tracking-widest text-gray-600">
+                FEATURED PROJECT
+              </div>
+              <h3 class="text-3xl font-light">
+                Converting Dashboard Design to Programming Language
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Slicing the page design that has been created from Figma into
+                script code that can be used in creating interactive and
+                responsive designs.
+              </p>
+              <div class="flex flex-wrap gap-3 pt-4">
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >React.js</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Bootstrap 5</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Figma</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Postman</span
+                >
+              </div>
+              <div class="pt-4">
+                <a
+                  href="https://www.linkedin.com/posts/andar-pinilas-802364247_internship-frontenddeveloper-ekatatechnologyindonesia-activity-7161175575812804608-uIUV?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD0ZWYIBYY1qMrxbSOMayAA54FDOGjHwBzk"
+                  class="inline-flex items-center gap-2 text-sm tracking-wider hover:gap-4 transition-all"
+                >
+                  VIEW PROJECT
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="lg:col-span-7">
+              <div
+                class="relative aspect-video bg-gray-900 border border-white/10 overflow-hidden group"
+              >
+                <img
+                  src="img/portfolio/po2.png"
+                  alt="Project 2"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Data Section -->
+    <section id="projects1" class="py-32 border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <div class="mb-16">
+          <p class="text-xs tracking-widest text-gray-600 mb-4">
+            04 — PROJECTS
+          </p>
+          <h2 class="text-4xl md:text-5xl font-light line-accent">
+            Selected Work Data
+          </h2>
+        </div>
+
+        <div class="space-y-24">
+          <!-- Project 1 -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center hover-lift">
+            <div class="lg:col-span-7 order-2 lg:order-1">
+              <div
+                class="relative aspect-video bg-gray-900 border border-white/10 overflow-hidden group"
+              >
+                <img
+                  src="img/portfolio/data/d1.jpg"
+                  alt="Project 1"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"
+                ></div>
+              </div>
+            </div>
+            <div class="lg:col-span-5 order-1 lg:order-2 space-y-4">
+              <div class="text-xs tracking-widest text-gray-600">
+                FEATURED PROJECT
+              </div>
+              <h3 class="text-3xl font-light">Shipping Data at Each Port</h3>
+              <p class="text-gray-400 leading-relaxed">
+                Obtaining evaluations that are able to encourage and provide
+                conclusions that can maintain and improve performance in the
+                economic sector.
+              </p>
+              <div class="flex flex-wrap gap-3 pt-4">
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Python</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Pandas</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Seaborn</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >LinearRegression</span
+                >
+              </div>
+              <div class="pt-4">
+                <a
+                  href="https://medium.com/@h4bisCod1ng/analisis-data-pengiriman-barang-disetiap-pelabuhan-923c62f4808e"
+                  class="inline-flex items-center gap-2 text-sm tracking-wider hover:gap-4 transition-all"
+                >
+                  VIEW PROJECT
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center hover-lift">
+            <div class="lg:col-span-5 space-y-4">
+              <div class="text-xs tracking-widest text-gray-600">
+                FEATURED PROJECT
+              </div>
+              <h3 class="text-3xl font-light">
+                Chocolate Preferences and Quality Based on Review and Rating
+                Data
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Analysis of chocolate trends from year to year, factors that
+                influence chocolate quality, and the amount of chocolate
+                production each year.
+              </p>
+              <div class="flex flex-wrap gap-3 pt-4">
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Python</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Pandas</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Seaborn</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Matplotlib</span
+                >
+              </div>
+              <div class="pt-4">
+                <a
+                  href="https://medium.com/@h4bisCod1ng/preferensi-dan-kualitas-cokelat-berdasarkan-data-review-dan-rating-fb78546bac7a"
+                  class="inline-flex items-center gap-2 text-sm tracking-wider hover:gap-4 transition-all"
+                >
+                  VIEW PROJECT
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="lg:col-span-7">
+              <div
+                class="relative aspect-video bg-gray-900 border border-white/10 overflow-hidden group"
+              >
+                <img
+                  src="img/portfolio/data/d2.jpg"
+                  alt="Project 2"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"
+                ></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center hover-lift">
+            <div class="lg:col-span-7 order-2 lg:order-1">
+              <div
+                class="relative aspect-video bg-gray-900 border border-white/10 overflow-hidden group"
+              >
+                <img
+                  src="img/portfolio/data/d3.jpg"
+                  alt="Project 3"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"
+                ></div>
+              </div>
+            </div>
+            <div class="lg:col-span-5 order-1 lg:order-2 space-y-4">
+              <div class="text-xs tracking-widest text-gray-600">
+                FEATURED PROJECT
+              </div>
+              <h3 class="text-3xl font-light">
+                Adidas Shoe Review Data | Deepening Consumer Preferences and
+                Product Quality
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                An exploration of the Adidas shoe review dataset to understand
+                trends, consumer preferences, and factors influencing product
+                reviews.
+              </p>
+              <div class="flex flex-wrap gap-3 pt-4">
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Python</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Pandas</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Matplotlib</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >WordCloud</span
+                >
+              </div>
+              <div class="pt-4">
+                <a
+                  href="https://medium.com/@h4bisCod1ng/analisis-data-ulasan-sepatu-adidas-memperdalam-preferensi-konsumen-dan-kualitas-produk-e888378a1681"
+                  class="inline-flex items-center gap-2 text-sm tracking-wider hover:gap-4 transition-all"
+                >
+                  VIEW PROJECT
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="grid lg:grid-cols-12 gap-8 items-center hover-lift">
+            <div class="lg:col-span-5 space-y-4">
+              <div class="text-xs tracking-widest text-gray-600">
+                FEATURED PROJECT
+              </div>
+              <h3 class="text-3xl font-light">
+                Exploratory Data on Courses on Coursera
+              </h3>
+              <p class="text-gray-400 leading-relaxed">
+                Get a better understanding of course trends on Coursera from
+                course titles, levels, instructors, and more.
+              </p>
+              <div class="flex flex-wrap gap-3 pt-4">
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Python</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Pandas</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >Matplotlib</span
+                >
+                <span
+                  class="text-xs tracking-wider text-gray-500 border border-white/10 px-3 py-1"
+                  >WordCloud</span
+                >
+              </div>
+              <div class="pt-4">
+                <a
+                  href="https://medium.com/@h4bisCod1ng/analisis-data-eksploratif-tentang-kursus-kursus-di-coursera-14511a1568b2"
+                  class="inline-flex items-center gap-2 text-sm tracking-wider hover:gap-4 transition-all"
+                >
+                  VIEW PROJECT
+                  <svg
+                    class="w-4 h-4"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="1.5"
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="lg:col-span-7">
+              <div
+                class="relative aspect-video bg-gray-900 border border-white/10 overflow-hidden group"
+              >
+                <img
+                  src="img/portfolio/data/d4.jpg"
+                  alt="Project 2"
+                  class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition duration-500"
+                />
+                <div
+                  class="absolute inset-0 bg-black/50 group-hover:bg-black/20 transition duration-500"
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer / Contact -->
+    <footer id="contact" class="py-32 border-t border-white/10">
+      <div class="max-w-6xl mx-auto px-6 lg:px-12">
+        <!-- Footer Bottom -->
+        <div class="grid md:grid-cols-3 gap-8 mb-12">
+          <div>
+            <div
+              class="w-12 h-12 border-2 border-gray-500 flex items-center justify-center mb-4"
+            >
+              <span class="text-lg font-bold">ANDAR</span>
+            </div>
+            <div class="text-sm text-gray-500 leading-relaxed">
+              <p>Jl. Tegalsari, Kota Surabaya, Jawa Timur, Indonesia</p>
+              <p>+628971667079</p>
+            </div>
+          </div>
+
+          <div>
+            <h4 class="text-xs tracking-widest text-gray-600 mb-4">
+              QUICK LINKS
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-400">
+              <li>
+                <a href="#about" class="hover:text-white transition"
+                  >About Me</a
+                >
+              </li>
+              <li>
+                <a href="#experience" class="hover:text-white transition"
+                  >Experience</a
+                >
+              </li>
+              <li>
+                <a href="#skills" class="hover:text-white transition">Skills</a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="text-xs tracking-widest text-gray-600 mb-4">SOCIAL</h4>
+            <div class="flex gap-4">
+              <a
+                href="https://www.instagram.com/hasco_de/"
+                class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/andar-pinilas-802364247"
+                class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="mailto:andarpinilas.s1@gmail.com"
+                class="w-10 h-10 border border-white/20 flex items-center justify-center hover:bg-white hover:text-black transition"
+              >
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"
+                  />
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="flex flex-col md:flex-row justify-between items-center gap-4 text-sm"
+        >
+          <p class="text-gray-500">
+            I am ready to contribute to your company!!!
+          </p>
+          <a
+            href="#"
+            class="px-6 py-3 border border-white/20 hover:bg-white hover:text-black transition text-sm tracking-wider"
+          >
+            RECRUIT NOW
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
